@@ -9,30 +9,30 @@
     <meta name="keywords" content="Sistem Pendukung Keputusan" />
     <meta name="author" content="Sistem Pendukung Keputusan" />
 
-    <title>Sistem Pendukung Keputusan< - <?= $title ?> | <?= ucfirst($this->session->userdata('role')) ?></title>
+    <title>Sistem Pendukung Keputusan <?= $title ?> | <?= ucfirst($this->session->userdata('role')) ?></title>
 
-            <!-- begin:: icon -->
-            <link rel="apple-touch-icon" href="<?= assets_url() ?>admin/images/icon/apple-touch-icon.png" sizes="180x180" />
-            <link rel="icon" href="<?= assets_url() ?>admin/images/icon/favicon-32x32.png" type="image/x-icon" sizes="32x32" />
-            <link rel="icon" href="<?= assets_url() ?>admin/images/icon/favicon-16x16.png" type="image/x-icon" sizes="16x16" />
-            <link rel="icon" href="<?= assets_url() ?>admin/images/icon/favicon.ico" type="image/x-icon" />
-            <link rel="shortcut icon" href="<?= assets_url() ?>admin/images/icon/favicon.ico" type="image/x-icon">
-            <!-- end:: icon -->
+    <!-- begin:: icon -->
+    <link rel="apple-touch-icon" href="<?= assets_url() ?>admin/images/icon/apple-touch-icon.png" sizes="180x180" />
+    <link rel="icon" href="<?= assets_url() ?>admin/images/icon/favicon-32x32.png" type="image/x-icon" sizes="32x32" />
+    <link rel="icon" href="<?= assets_url() ?>admin/images/icon/favicon-16x16.png" type="image/x-icon" sizes="16x16" />
+    <link rel="icon" href="<?= assets_url() ?>admin/images/icon/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="<?= assets_url() ?>admin/images/icon/favicon.ico" type="image/x-icon">
+    <!-- end:: icon -->
 
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" />
-            <link rel="stylesheet" type="text/css" href="<?= assets_url() ?>admin/css/font-awesome.min.css">
-            <link rel="stylesheet" type="text/css" href="<?= assets_url() ?>admin/icon/icofont/css/icofont.css">
-            <link rel="stylesheet" type="text/css" href="<?= assets_url() ?>admin/bootstrap/css/bootstrap.min.css" />
-            <link rel="stylesheet" type="text/css" href="<?= assets_url() ?>admin/pages/waves/css/waves.min.css" media="all" />
-            <link rel="stylesheet" type="text/css" href="<?= assets_url() ?>admin/icon/feather/css/feather.css" />
-            <link rel="stylesheet" type="text/css" href="<?= assets_url() ?>admin/css/style.css" />
-            <link rel="stylesheet" type="text/css" href="<?= assets_url() ?>admin/css/widget.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" />
+    <link rel="stylesheet" type="text/css" href="<?= assets_url() ?>admin/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="<?= assets_url() ?>admin/icon/icofont/css/icofont.css">
+    <link rel="stylesheet" type="text/css" href="<?= assets_url() ?>admin/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="<?= assets_url() ?>admin/pages/waves/css/waves.min.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="<?= assets_url() ?>admin/icon/feather/css/feather.css" />
+    <link rel="stylesheet" type="text/css" href="<?= assets_url() ?>admin/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="<?= assets_url() ?>admin/css/widget.css" />
 
-            <!-- begin:: css local -->
-            <?php empty($css) ? '' : $this->load->view($css); ?>
-            <!-- end:: css local -->
+    <!-- begin:: css local -->
+    <?php empty($css) ? '' : $this->load->view($css); ?>
+    <!-- end:: css local -->
 
-            <script type="text/javascript" src="<?= assets_url() ?>admin/jquery/js/jquery.min.js"></script>
+    <script type="text/javascript" src="<?= assets_url() ?>admin/jquery/js/jquery.min.js"></script>
 </head>
 
 <body>
