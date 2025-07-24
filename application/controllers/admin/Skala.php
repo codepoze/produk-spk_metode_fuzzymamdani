@@ -25,6 +25,24 @@ class Skala extends MY_Controller
         $this->m_skala->list_dt();
     }
 
+    public function get_skala()
+    {
+        $post = $this->input->get(NULL, TRUE);
+
+        $get = $this->crud->gwra('tb_skala', ['id_kriteria' => $post['id_kriteria']]);
+
+        $result = [];
+
+        foreach ($get as $key => $value) {
+            $result[] = [
+                'id_skala' => $value['id_skala'],
+                'nama'     => $value['nama'],
+            ];
+        }
+
+        $this->_response($result);
+    }
+
     public function show()
     {
         $post = $this->input->post(NULL, TRUE);

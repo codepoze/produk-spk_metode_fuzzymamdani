@@ -89,9 +89,6 @@
                         <div class="col-sm-9">
                             <select name="id_skala" id="id_skala" class="form-control">
                                 <option value="">- Pilih -</option>
-                                <?php foreach ($skala as $key => $row) { ?>
-                                    <option value="<?= $row->id_skala ?>"><?= $row->skala ?></option>
-                                <?php } ?>
                             </select>
                         </div>
                     </div>

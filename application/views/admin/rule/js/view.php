@@ -198,4 +198,37 @@
             });
         });
     }();
+
+    let forSkala = function() {
+        $(document).on('change', '#id_kriteria', function(e) {
+            e.preventDefault();
+            getSkala($(this).val());
+        });
+    }();
+
+    function getSkala(id_kriteria, id_skala = '') {
+        $.ajax({
+            method: 'get',
+            url: "<?= admin_url() ?>skala/get_skala",
+            data: {
+                id_kriteria: id_kriteria
+            },
+            dataType: 'json',
+            beforeSend: function() {
+                $('#id_skala').empty();
+                $('#id_skala').append('<option value="">Loading...</option>');
+            },
+            success: function(response) {
+                $('#id_skala').empty();
+                $('#id_skala').append('<option value="">Pilih</option>');
+                for (let i = 0; i < response.length; i++) {
+                    $('#id_skala').append(new Option(response[i].nama, response[i].id_skala));
+                }
+
+                if (id_skala != '') {
+                    $('#id_skala').val(id_skala);
+                }
+            }
+        });
+    }
 </script>

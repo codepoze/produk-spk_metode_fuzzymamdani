@@ -15,7 +15,6 @@ class Rule extends MY_Controller
     {
         $data = [
             'kriteria' => $this->m_kriteria->list()->result(),
-            'skala'    => $this->m_skala->list()->result(),
         ];
 
         $this->template->load('admin', 'Rule', 'rule', 'view', $data);
