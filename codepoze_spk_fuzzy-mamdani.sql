@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 04, 2025 at 01:50 PM
--- Server version: 5.7.25
--- PHP Version: 7.2.19
+-- Generation Time: Apr 26, 2026 at 08:23 AM
+-- Server version: 8.0.11
+-- PHP Version: 7.4.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `skripsi_spk_fuzzy-mamdani`
+-- Database: `codepoze_spk_fuzzy-mamdani`
 --
 
 -- --------------------------------------------------------
@@ -31,7 +31,7 @@ CREATE TABLE `tb_kriteria` (
   `id_kriteria` int(11) NOT NULL,
   `nama` varchar(50) DEFAULT NULL,
   `jenis` enum('input','output') NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
 
 --
 -- Dumping data for table `tb_kriteria`
@@ -53,7 +53,7 @@ CREATE TABLE `tb_rule` (
   `id_kriteria` int(11) DEFAULT NULL,
   `id_skala` int(11) DEFAULT NULL,
   `kondisi` enum('if','then') DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
 
 --
 -- Dumping data for table `tb_rule`
@@ -92,7 +92,7 @@ CREATE TABLE `tb_skala` (
   `batas_bawah` float DEFAULT NULL,
   `batas_tengah` float DEFAULT NULL,
   `batas_atas` float DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
 
 --
 -- Dumping data for table `tb_skala`
@@ -116,12 +116,12 @@ INSERT INTO `tb_skala` (`id_skala`, `id_kriteria`, `nama`, `batas_bawah`, `batas
 CREATE TABLE `tb_users` (
   `id` int(11) NOT NULL,
   `id_users` int(11) NOT NULL,
-  `nama` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `email` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `foto` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `username` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `password` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `roles` enum('admin','users') COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nama` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `foto` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `username` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `roles` enum('admin','users') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `ins` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `upd` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;

@@ -10,14 +10,19 @@ function justAngka(e) {
     }
 };
 
+// untuk bulan
+function getBulan(bln) {
+    var namaBulan = ['', 'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+    return namaBulan[bln];
+}
+
 // untuk tgl indo
 function tglIndo(date) {
-    var namaBulan = ['', 'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
     var tanggal = date.substr(8, 2);
     var bulan = parseInt(date.substr(5, 2));
     var tahun = date.substr(0, 4);
 
-    var result = tanggal + ' ' + namaBulan[bulan] + ' ' + tahun;
+    var result = tanggal + ' ' + getBulan(bulan) + ' ' + tahun;
 
     return result;
 }
@@ -56,6 +61,12 @@ function readMore(string) {
     return string.substring(0, 100) + '...';
 }
 
+// untuk debugin console log
+const log = (arg) => console.log(arg);
+
+// untuk copright
+$('.copyright').html(`<em>&copy; ${new Date().getFullYear()}. Developed with <span style="color: #e25555;">&#9829;</span> by <a href="https://alanlengkoan.com" target="_blank">alanlengkoan</a></em>`);
+
 // untuk input nomor type text
 (function ($) {
     $.fn.inputFilter = function (inputFilter) {
@@ -77,9 +88,3 @@ function readMore(string) {
 $(".inputNumber").inputFilter(function (value) {
     return /^-?\d*$/.test(value);
 });
-
-// untuk debugin console log
-const log = (arg) => console.log(arg);
-
-// untuk copright
-$('.copyright').html(`<em>&copy; ${new Date().getFullYear()}. Developed with <span style="color: #e25555;">&#9829;</span> by <a href="https://alanlengkoan.com" target="_blank">alanlengkoan</a></em>`);

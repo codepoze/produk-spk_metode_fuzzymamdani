@@ -1,0 +1,129 @@
+:root {
+  --primary-color: #3674B5;
+}
+
+.error {
+    color: red;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: .875em;
+}
+
+.parsley-errors-list {
+  color: red;
+  list-style-type: none;
+  padding: 0;
+}
+
+.btn-action {
+    width: 100%;
+}
+
+.table thead th {
+    background-color: var(--primary-color) !important;
+    border-color: #fff;
+    color: white;
+}
+
+.bg-custom {
+    background-color: var(--primary-color) !important;
+}
+
+/* loading */
+.loader {
+    margin-right: auto;
+    margin-left: auto;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #1071BA;
+    width: 90px;
+    height: 90px;
+    -webkit-animation: spin 2s linear infinite;
+    /* Safari */
+    animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.select2-selection__rendered {
+    line-height: 35px !important;
+}
+
+.select2-container .select2-selection--single {
+    height: 35px !important;
+}
+
+.select2-selection__arrow {
+    height: 35px !important;
+}
+
+.system-title {
+    color: #fff;
+    margin: 0;
+}
+
+@media only screen and (max-width: 991px) {
+    .system-title {
+        color: #4680ff;
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 955px) {
+    .system-title {
+        color: #4680ff;
+        margin-top: 10px;
+        font-size: 23px;
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    .system-title {
+        color: #4680ff;
+        margin-top: 15px;
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 675px) {
+    .system-title {
+        color: #4680ff;
+        margin-top: 15px;
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 645px) {
+    .system-title {
+        color: #4680ff;
+        margin-top: 15px;
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .system-title {
+        color: #4680ff;
+        margin-top: 7px;
+        font-size: 15px;
+    }
+}
